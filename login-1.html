@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Flyme账号-登录</title>
+		<link rel="stylesheet" href="./css/login-css.css" />
+		<script src="./js/checkPhone.js"></script>
+	</head>
+
+	<body>
+		<div id="content" class="content">
+			<div class="top_header">
+				<a href="http://www.meizu.com/" class="meizuLogo">
+					<i class="i_icon"><img src="./image/base.png" /></i>
+				</a>
+			</div>
+
+			<div class="banner-box">
+				<!-- ::before -->
+				<img src="./image/bg1.png" alt="Flyme" />
+				<div class="bg_box">
+
+				</div>
+				<form id="mainform" class="mainform">
+					<div class="tab-title">
+						<a class="linkABlack" onclick="zhanghao()">账号登录</a>
+						<span class="register-line"></span>
+						<a class="linkAGray" onclick="erweima()">二维码登录</a>
+					</div>
+					<div id="changEr" class="changEr">
+						<div class="card_input " sytle="height: 36px; ">
+							<label>
+								<input id="cycode" value="+86" style="width: 22%;height: 40px; ">
+							</label>
+							<!-- <span> -->
+							<input text-indent: 8px maxlength="20" style="height:40px; width:74%" placeholder="手机号码" autocomplete="off" tabindex="2">
+							<!-- </span> -->
+						</div>
+						<div class='card_input'>
+							<input type="password" style="height:40px; width:100%" class="inp-focus" name="password" id="password" maxlength='16' placeholder='密码' autocomplete='off' />
+						</div>
+
+						<div class='rememberField'>
+							<span><input name="remember" id="remember" type="checkbox" value="1"/></span>
+							<label for="remember" tabindex="0">记住登录状态</label>
+
+						</div>
+
+						<a login-form-bytel class='BtnBlue'>登录</a>
+						<div class='other' id="login-form-forregister">
+							<a>忘记密码?</a>
+							<a href="./zhuce.html">注册</a>
+						</div>
+					</div>
+					<div class="zhang" id="zhang">
+						<div class="qr-img-box">
+							<img alt="" src="./image/erweima.jpg" style="width: 300px; height: 300px;" />
+						</div>
+						<p class="tips">请使用账号中心右上角或最新的Flyme系统相机扫码功能,扫码登录</p>
+					</div>
+					<a href="./login.html" class="qr-btn1"></a>
+				</form>
+			</div>
+
+			<div id="flymeFooter" class="footerWrap">
+				<div class="footerInner">
+					<div class="footer-layer1">
+						<div class="footer-innerLink">
+							<a href="#" target="_blank" title="关于魅族">关于魅族</a>
+							<img class="foot-line" src="./image/space.gif">
+
+							<a href="#" target="_blank" title="工作机会">工作机会</a>
+							<img class="foot-line" src="./image/space.gif">
+
+							<a href="#" target="_blank" title="联系我们">联系我们</a>
+							<img class="foot-line" src="./image/space.gif">
+
+							<a href="#" target="_blank" title="法律声明">法律声明</a>
+							<img class="foot-line" ssrc="./image/space.gif">
+
+							<a href="#" target="_blank" title="常见问题">常见问题</a>
+							<img class="foot-line" src="./image/space.gif">
+
+							<a href="#" target="_blank" title="简体中文">简体中文</a>
+						</div>
+						<div class="footer-service">
+							<span class="service-label">客服热线</span>
+							<span class="service-num">400-788-3333</span>
+							<a id="service-online" class="service-online" title="在线客服">在线客服</a>
+						</div>
+						<div class="footer-last"></div>
+
+					</div>
+					<div class="clear"></div>
+					<div id="flymeCopyright" class="copyrightWrap">
+						<div class="copyrightInner">
+							<span>©2021 Meizu Telecom Equipment Co., Ltd. All rights reserved.</span>
+							<span>备案号: 粤ICP备13003602号-4</span>
+							<span style="background: url('./image/ghs.png') no-repeat; background-size: 15px 14px; padding-left: 18px;background-position-y: center;">粤公网安备 44049102496076号</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>-->
+		<script src="js/jquery.min.js"></script>  
+	</body>
+	<script>
+		init();
+
+		function init() {
+			$("#zhang").hide();
+		}
+
+		function zhanghao() {
+			$("#changEr").show();
+			$("#zhang").hide();
+		}
+
+		function erweima() {
+			console.log(111)
+				//			$(this).addClass("changEr").siblings("changEr").removeClass("changEr");
+				//$("div").siblings().removeAttr("class").removeAttr("style").removeAttr("id");
+			$("#changEr").hide();
+			$("#zhang").show();
+		}
+	</script>
+
+</html>

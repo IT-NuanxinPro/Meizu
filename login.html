@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Flyme账号-登录</title>
+		<link rel="stylesheet" href="./css/login-css.css" />
+		<script src="./js/checkPhone1.js" ></script>
+	</head>
+
+	<body>
+		<div id="content" class="content">
+			<div class="top_header">
+				<a href="http://www.meizu.com/" class="meizuLogo">
+					<i class="i_icon"><img src="./image/base.png" /></i>
+				</a>
+			</div>
+
+			<div class="banner-box">
+				<!-- ::before -->
+				<img src="./image/bg1.png" alt="Flyme"  style="width: 100%;"/>
+				<div class="bg_box">
+
+				</div>
+				<form id="mainform" class="mainform" action="123.do" method="post">
+					<div class="card_title">
+						<h3>验证码登录</h3>
+					</div>
+					<div class="card_input " sytle="height: 36px;">
+						<span>
+                                <input id="cycode" value="+86" style="width: 23%;height: 40px;padding: 0px 0px; ">
+                            </span>
+						<!-- <span> -->
+							<input id="inputText" text-indent: 8px  maxlength="20" placeholder="手机号码" autocomplete="off" tabindex="2" style="height: 44px;position: relative; 
+							font-size:16px;border: 1px solid #dadada;  width: 74%; padding: 0px 0px;">
+					   </span>
+						<!-- </span> -->
+
+					</div>
+					<!-- <div class="card_input"> -->
+					<!--<input type="text" id="vcode" placeholder="验证码" value="请输入验证码" onfocus="this.value=''" onblur="if(this.value=='')this.value='验证码'" />
+					<span id="code" title="看不清,换一张"></span>-->
+					<div id="" style="height: 36px;">
+
+						<input type="text" value="" placeholder="请输入验证码" style="height:43px;position: relative; 
+						top:-15px; font-size:16px;border: 1px solid #dadada;" id="text">
+						<canvas id="canvas" width="94" height="43" onclick="dj()" style="border: 1px solid #ccc;
+        				border-radius: 5px;float: right; margin-top: -15px;padding-top: 0px;"></canvas>
+					</div>
+					<!-- </div> -->
+					<div class="btn">
+						<!--<a id="register" class="BtnBlue" value="登录" href="#">登录</a>-->
+						<input type="button" value="登录" style="width: 300px; height: 46px;
+                        	background-color: #387AFF;display: block;font-size: 14px;
+                        	line-height: 46px; text-align: center;margin-bottom: 10px;outline: none;
+                        	cursor: pointer;color: #fff; border-radius: 4px;" onclick="checkPhone()" />
+					</div>
+					<div class="other">
+						<a href="./zhuce.html">注册</a>
+						<a href="#01">忘记密码?</a>
+					</div>
+					<a href="./login-1.html"  class="qr-btn"></a>
+				</form>
+
+			</div>
+			<div id="flymeFooter" class="footerWrap">
+				<div class="footerInner">
+					<div class="footer-layer1">
+						<div class="footer-innerLink">
+							<a href="#" target="_blank" title="关于魅族">关于魅族</a>
+							<img class="foot-line" src="./image/space.gif">
+
+							<a href="#" target="_blank" title="工作机会">工作机会</a>
+							<img class="foot-line" src="./image/space.gif">
+
+							<a href="#" target="_blank" title="联系我们">联系我们</a>
+							<img class="foot-line" src="./image/space.gif">
+
+							<a href="#" target="_blank" title="法律声明">法律声明</a>
+							<img class="foot-line" ssrc="./image/space.gif">
+
+							<a href="#" target="_blank" title="常见问题">常见问题</a>
+							<img class="foot-line" src="./image/space.gif">
+
+							<a href="#" target="_blank" title="简体中文">简体中文</a>
+						</div>
+						<div class="footer-service">
+							<span class="service-label">客服热线</span>
+							<span class="service-num">400-788-3333</span>
+							<a id="service-online" class="service-online" title="在线客服">在线客服</a>
+						</div>
+						<div class="footer-last"></div>
+
+					</div>
+					<div id="flymeCopyright" class="copyrightWrap">
+						<div class="copyrightInner">
+							<span>©2021 Meizu Telecom Equipment Co., Ltd. All rights reserved.</span>
+							<span>备案号: 粤ICP备13003602号-4</span>
+							<span style="background: url('./image/ghs.png') no-repeat; background-size: 15px 14px; padding-left: 18px;background-position-y: center;">粤公网安备 44049102496076号</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+	<script>
+		function zhanghao() {
+			$("#changEr").show();
+			$("#zhang").hide();
+		}
+
+		function erweima() {
+			console.log(111)
+				//			$(this).addClass("changEr").siblings("changEr").removeClass("changEr");
+				//$("div").siblings().removeAttr("class").removeAttr("style").removeAttr("id");
+			$("#changEr").hide();
+			$("#zhang").show();
+		}
+// 验证码部分
+		var show_num = [];
+		draw(show_num);
+
+		function dj() {
+			draw(show_num);
+		}
+
+		function sublim() {
+			var val = document.getElementById("text").value;
+			var num = show_num.join("");
+			if (val == '') {
+				alert('请输入验证码!');
+			} else if (val == num) {
+				alert('提交成功!');
+				document.getElementById(".input-val").val('');
+				draw(show_num);
+			} else {
+				alert('验证码错误!\n你输入的是:  ' + val + "\n正确的是:  " + num + '\n请重新输入!');
+				document.getElementById("text").value = '';
+				draw(show_num);
+			}
+		}
+
+		function draw(show_num) {
+			var canvas_width = document.getElementById('canvas').clientWidth;
+			var canvas_height = document.getElementById('canvas').clientHeight;
+			var canvas = document.getElementById("canvas"); //获取到canvas的对象,演员
+			var context = canvas.getContext("2d"); //获取到canvas画图的环境,演员表演的舞台
+			canvas.width = canvas_width;
+			canvas.height = canvas_height;
+			var sCode = "A,B,C,E,F,G,H,J,K,L,M,N,P,Q,R,S,T,W,X,Y,Z,1,2,3,4,5,6,7,8,9,0,q,w,e,r,t,y,u,i,o,p,a,s,d,f,g,h,j,k,l,z,x,c,v,b,n,m";
+			var aCode = sCode.split(",");
+			var aLength = aCode.length; //获取到数组的长度
+			for (var i = 0; i <= 3; i++) {
+				var j = Math.floor(Math.random() * aLength); //获取到随机的索引值
+				var deg = Math.random() * 30 * Math.PI / 180; //产生0~30之间的随机弧度
+				var txt = aCode[j]; //得到随机的一个内容
+				show_num[i] = txt;
+				var x = 10 + i * 20; //文字在canvas上的x坐标
+				var y = 20 + Math.random() * 8; //文字在canvas上的y坐标
+				context.font = "bold 23px 微软雅黑";
+				context.translate(x, y);
+				context.rotate(deg);
+				context.fillStyle = randomColor();
+				context.fillText(txt, 0, 0);
+				context.rotate(-deg);
+				context.translate(-x, -y);
+			}
+			for (var i = 0; i <= 5; i++) { //验证码上显示线条
+				context.strokeStyle = randomColor();
+				context.beginPath();
+				context.moveTo(Math.random() * canvas_width, Math.random() * canvas_height);
+				context.lineTo(Math.random() * canvas_width, Math.random() * canvas_height);
+				context.stroke();
+			}
+			for (var i = 0; i <= 30; i++) { //验证码上显示小点
+				context.strokeStyle = randomColor();
+				context.beginPath();
+				var x = Math.random() * canvas_width;
+				var y = Math.random() * canvas_height;
+				context.moveTo(x, y);
+				context.lineTo(x + 1, y + 1);
+				context.stroke();
+			}
+		}
+
+		function randomColor() { //得到随机的颜色值
+			var r = Math.floor(Math.random() * 256);
+			var g = Math.floor(Math.random() * 256);
+			var b = Math.floor(Math.random() * 256);
+			return "rgb(" + r + "," + g + "," + b + ")";
+		}
+	</script>
+	<!-- <script src="./js/login.js"></script> -->
+
+</html>

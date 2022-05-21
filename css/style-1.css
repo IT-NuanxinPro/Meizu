@@ -1,0 +1,744 @@
+*{
+    margin: 0px auto;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{ 
+    font-family: Helvetica,Tahoma,Arial,Hiragino Sans GB,Microsoft YaHei,SimSun,Heiti,sans-serif;
+}
+.main{
+        width: 100%;
+        margin: 0px auto;
+        background-color: #f4f4f4;
+}
+/*头部部分  */
+.banner{
+    width: 100%;
+    height: 680px;
+    background-image: url("../image/banner-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 0;
+    animation: banner 6s linear infinite;
+}
+
+.banner:hover{
+    animation-play-state: paused;
+}
+
+@keyframes banner{
+    0%{
+        background-image: url("../image/banner-2.jpg");
+        
+    }
+    50%{
+        background-image: url("../image/banner-3.jpg");
+    }
+    100%{
+        background-image: url("../image/banner1.jpg");
+    }
+}
+
+.nav{
+    width: 100%;
+    height: 82px;
+    margin: 0px auto;
+    position: relative;
+}
+
+.nav .logo{
+    float: left;
+    width:150px;
+    height: 80px;
+}
+
+.nav>.logo>img{
+    margin:28px 0px 0px 18px ;
+}
+
+.head-1{
+    display: block;
+    float: left;
+    width: 738px;
+    height:80px;
+    margin-left: 80px; 
+}
+
+.head1>ul{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+ul li{
+    list-style: none;
+    float: left;
+    margin:0 20px 0 11px;
+    padding-left: 4px;
+}
+ul li a{
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 80px;
+    color: #fff;
+}
+
+a:hover{
+    color: #008cff;
+}
+
+/* 悬浮下拉菜单
+.head-1 ul .h_n_1:hover ~ .head_product_info,
+.head_product_info:hover {
+    width: 100%;
+    height: 183px;
+    border-bottom: 1px solid #e9e9e9;
+    position: absolute;
+    left: 12px;
+    top: 82px;
+    z-index: 50;  
+}
+
+.head_product_info {
+    width: 100%;
+    height: 0px;
+    background-color:#fff;
+    overflow: hidden;
+    transition: all .3s;
+}
+
+.h_p_info {
+    width: 1240px;
+    height: 0px;
+    margin-left: 54.5px;
+    margin-right: 54.5px;
+}
+
+.h_p_info ul{
+    width: 1240px;
+    height: 200px;
+    overflow: hidden;
+    padding: 5px 0 20px;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 12px;
+}
+
+.h_p_info li {
+    display: inline-block;
+    text-align: center;
+    padding: 5px 10px 10px;
+    width: 140px;
+    height: 167px;
+    font-size: 12px;
+    color: #333;
+    position: relative;
+} 
+
+.h_p_info li a{
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 99;
+}
+.h_p_info_img i{
+    display: block;
+}
+.h_p_info i{
+    display: block;
+    width: 120px;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    font-style: normal;
+}
+
+.h_p_info em{
+    display: block;
+    color: #333;
+    font-style: normal;
+    font-size: 1em;
+    font-weight: 400;
+    position: relative;
+    top: -18px;
+} */
+
+/* 搜索框 */
+.head-2 {
+    display:block;
+    float: left;
+    height:80px;
+    width: 254px;
+}
+
+.search input{
+    display: block;
+    width: 170px;
+    height: 30px;
+    border: 1px solid rgba(0,0,0,0.15);
+    margin: 24px 0 0 18px;
+    border-radius: 20px;
+    line-height :28px;
+    float: left;
+    color: #fff;
+}
+input.search-input{
+    font-size: 12px;
+    line-height: 20px;
+    /* color: #999; */
+    padding: 0 0 0 15px; 
+    box-sizing: border-box;
+}
+
+.head-2 .search a  img{
+    width: 17px;
+    height: 14px;
+    float: left;
+    margin-top: -22px;
+    margin-right: 6px;
+    margin-left: 162px;
+    cursor: pointer;
+    display:block;
+}
+
+.head_user {
+    width: 32px;
+    height: 32px;
+    margin-top: 24px;
+    background:url(../image/user.png) no-repeat;
+    display:inline-block;
+    margin-left: 12px;
+}
+
+.info_all {
+    width: 70px;
+    height: 112px;
+    background-color:#fff;
+    margin-top: 32px;
+    margin-left: -16px;
+    display:none;
+    box-shadow: 0 0 5px rgb(0 0 0 / 10%);
+}
+
+.head_user:hover div {
+    display: block; 
+}
+
+.info_all div{
+    padding-bottom: 10px;
+    margin-left: 10px;
+    margin-top:1px;
+}
+
+.info_all div a{
+    font-size: 12px;
+    color: #515151;
+}
+
+.info_all div a:hover{
+    color:  #008cff;
+}
+
+.head_cart{
+    float: right;
+    margin: 27px 0 0 8px;
+    width: 29px;
+    height: 29px;
+    background-image:-webkit-image-set(url(../image/gouwuche.png) 2x);
+    left: 1200px;
+    top: -2px;
+    position: absolute;
+}
+
+.head_cart_list{
+    width: 316px;
+    height: 0px;
+    background-color:#fff;
+    margin-top:34px;
+    margin-left: -282px;
+    box-shadow: 0px 2px 10px rgba(0 0 0 .15);
+    color: #999292;
+    border-radius:5px;
+    position: relative;
+    transition: all .3s;
+    overflow: hidden;
+}
+
+.head_cart_list div{
+    position: absolute;
+    top: 30px;
+    font-size:12px;
+    left: 95px;
+}
+
+.head_cart:hover .head_cart_list{
+    height: 100px;
+}
+
+.head_cart em{
+    position: absolute;
+    top: -2px;
+    right: -3px;
+    height: 15px;
+    border-radius: 50%;
+    background: #c00;
+    color: #fff;
+    line-height: 15px;
+    text-align: center;
+    display: inline-block;
+    padding: 0 4px;
+    text-indent: 0;
+}
+
+address, caption, cite, code, em, figcaption, h1, h2, h3, h4, h5, h6, pre, strong, th {
+    font-size: 1em;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.center{
+    width: 1264px;
+    height: 278px;
+    background-color:white;
+}
+
+.center ul li  {
+    float: left;
+    width: 310px;
+    height: 233px;
+    background-color:white;
+    padding-top: 45px;
+    display:block;
+    margin: 0 0px;
+}
+img.goodimage{
+    margin: 0 90px;
+}
+
+
+.items-title{
+    display: block;
+    color: #333;
+    font-size: 20px;
+    font-style: normal;
+    text-align: center;
+    font-weight: 400;
+}
+
+
+p{
+    font-size: 14px;
+    color: #999;
+    max-height: 100%;
+    text-align: center;
+    line-height:21px;
+}
+
+.container{
+    background-color: #f4f4f4;
+    overflow: hidden;
+}
+/* 手机部分 */
+
+
+.phone_bigbox {
+    width: 100%;
+    height: 1510px;
+    margin: auto;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.phone_title {
+    width: 100%;
+    height: 45px;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 60px;
+}
+h3 {
+    font-size: 1em;
+    font-weight: 400;
+    font-style: normal;
+}
+.phone_img {
+    width: 100%;
+    height: 449px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+.phone_img a{
+    display: block;
+    height: 449px;
+    overflow: hidden;
+    background: url("../image/shouji-banner.jpg") no-repeat center;
+    background-size: 2560px 450px;
+}
+.phone_product {
+    width: 1340px;
+    height: 1005px;
+    position: relative;
+    margin: auto;
+}
+.phone_position {
+    width: 1240px;
+    height: 1005px;
+    position: absolute;
+    margin-left: 54.5px;
+    margin-right: 54.5px;
+}
+
+.phone_position em{
+    font-size: 16px;
+    font-style: inherit;
+}
+.p_product_1 {
+    width: 615px;
+    height: 610px;
+    margin-top: 10px;
+    margin-right: 9px;
+    float: left;
+    background: #fff;
+    position: relative;
+    
+}
+
+
+.p_product_1:hover,.p_product_2:hover,.p_product_3:hover,.p_product_4:hover {
+    box-shadow: 3px 3px 15px rgb(214, 211, 211);
+}
+.p_product_1 img {
+    width: 460px;
+    height: 460px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -250px;
+    margin-top: 30px;
+}
+.p_product_2 {
+    width: 615px;
+    height: 610px;
+    margin-top: 10px;
+    float: left;
+    background: #fff;
+    position: relative;
+}
+
+.p_product_2 img {
+    width: 460px;
+    height: 460px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -250px;
+    margin-top: 30px;
+}
+.p_p_1_info {
+    width: 615px;
+    height: 105px;
+    top: 58px;
+    position: absolute;
+    left: 0;
+    text-align: center;
+}
+.phone_product span {
+    display: block;
+}
+.product_sign_1 {
+    background-image: linear-gradient(120deg,#ff3149,#ff64a6);
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    display: block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.p_1_name {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 0;
+}
+.p_1_dec{
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+.p_1_price {
+    display: inline-block;
+    color: #c00;
+    font-size: 22px;
+}
+.p_1_price i {
+    font-size: 14px;
+    bottom: 3px;
+    font-style: normal;
+}
+.p_product_3 {
+    width: 303px;
+    height: 375px;
+    margin-top: 10px;
+    margin-right: 8px;
+    float: left;
+    background: #fff;
+    position: relative;
+}
+
+.p_product_3 img {
+    height: 230px;
+    width: 230px;
+    position: absolute;
+    left: 50%;
+    margin-left: -110px;
+    margin-top: 30px;
+}
+.p_p_2_info {
+    width: 303px;
+    height: 80px;
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    text-align: center;
+}
+.p_2_name {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+.p_2_dec {
+    color: #999;
+    font-size: 14px;
+}
+.p_product_4 {
+    width: 303px;
+    height: 375px;
+    margin-top: 10px;
+    float: left;
+    background: #fff;
+    position: relative;
+}
+.p_product_4 img {
+    height: 230px;
+    width: 230px;
+    position: absolute;
+    left: 50%;
+    margin-left: -110px;
+    margin-top: 30px;
+}
+
+.p_2_price {
+    position: relative;
+    display: inline-block;
+    color: #c00;
+    font-size: 22px;
+    padding-left: 14px;
+    margin-top: 10px;
+}
+.p_2_price i{
+    font-size: 14px;
+    bottom: 3px;
+    font-style: normal;
+}
+
+/* 魅族声学部分 */
+
+.shengxue_bigbox {
+    width: 100%;
+    height: 1275px;
+    margin: auto;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.shengxue_title {
+    width: 100%;
+    height: 45px;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 60px;
+}
+h3 {
+    font-size: 1em;
+    font-weight: 400;
+    font-style: normal;
+}
+.shengxue_img {
+    width: 100%;
+    height: 449px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+.shengxue_img a{
+    display: block;
+    height: 449px;
+    overflow: hidden;
+    background: url("../image/shengxue-banner.jpg") no-repeat center;
+    background-size: 2560px 450px;
+}
+
+.shengxue_product{
+    width: 1263.33px;
+    position: relative;
+    margin-top:10px;
+}
+
+.shengxue_position span {
+    display: block;
+}
+
+/* 魅族声学左边部分 */
+.shengxue_position .cart3-left {
+    width:303px;
+    height: 760px;
+    float: left;
+}
+ul .s_product_1{
+    width: 303px;
+    height: 375px;
+    margin: 0px 0px 10px 0px;
+    position: relative;
+    background-color: #fff;
+}
+
+.s_product_info_1{
+    width: 303px;
+    height: 88.5px;
+    position: absolute;
+    top: 267px;
+    text-align: center;
+    left: 0;
+    margin-left: 5px;
+}
+
+.s_product_info_1 .s_product_name{
+    color: #fff;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 0;
+    line-height:31.5px;
+}
+
+.s_product_info_1 .s_product_dec{
+    color: #fff;
+    font-size: 14px;
+    line-height:21px;
+}
+
+.s_product_info_1 .s_product_price {
+    color: #ebce6b;
+    font-size: 24px;
+    font-weight: 700;
+    line-height:36px;
+}
+
+
+.s_product_info_1 .s_product_price i{
+    font-size: 22px;
+    bottom: 1px;
+    font-style: normal;
+}
+
+.s_product_info_1 .s_product_price em{
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.s_product_info_1 .s_product_price s{
+    margin-left: 4px;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* 右边部分 */
+.shengxue_position .cart3-right {
+    width: 939px;
+    height: 760px;
+    float: left;
+    margin-left: 10px;
+    position: relative;
+}
+
+.s_product_2{
+    width: 303px;
+    height: 375px;
+    margin: 0px 10px 10px 0px;
+    padding-left: 0px;
+    background-color: #fff;
+    margin: 0px  10px 10px 0px; ;
+    padding: 0px 36.5px ;
+    box-sizing: border-box;
+}
+
+
+.s_product_info_2{
+    /* position: absolute; */
+    top: 270px;
+    left: 0;
+    width: 303px;
+    text-align: center;
+    color: #515151;
+    line-height: 105px;
+    margin-left: -30px;
+}
+
+
+.s_product_info_2 .s_product_name{
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 2px;
+    line-height:24px;
+}
+
+.s_product_info_2 .s_product_dec{
+    color: #999;
+    font-size: 13px;
+    margin-top: 3px;
+    overflow: hidden;
+    line-height: 21px;
+}
+
+.s_product_info_2 .s_product_price{
+    position: relative;
+    color: #c00;
+    font-size: 22px;
+    padding-left: 14px;
+    line-height: 33px;
+    bottom: 25px;
+    display: inline-block;
+}
+
+.s_product_info_2 .s_product_price i{
+    position: absolute;
+    left:0;
+    font-size: 14px;
+    font-style: normal;
+}
+
+.s_product_1:hover,.s_product_2:hover{
+    box-shadow: 3px 3px 15px rgb(214, 211, 211);
+}
+
+.s_product_info_2 .s_product_price del{
+    font-size: 14px;
+    color: #666;
+}
+
+
+

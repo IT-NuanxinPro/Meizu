@@ -1,0 +1,251 @@
+body {
+    width: 100%;
+    height: 100%;
+    background: none;
+    background-color: white;
+    font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #515151;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+div, h1, h2, h3, h4, p, form, label, input, img, span, dl, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+}
+#content{
+    position: relative;
+}
+.content{
+    width: 100%;
+}
+.top_header {
+    height: auto;
+    padding-top: 28px;
+    padding-bottom: 40px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.meizuLogo {
+    float:left;
+    height: 30px;
+    width: 110px;
+    overflow: hidden;
+    display: block;
+}
+.meizuLogo i{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: -2px -4px no-repeat;
+}
+a {
+    color: #515151;
+    text-decoration: none;
+}
+.i_icon {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    
+}
+.banner-box {
+    display: flex;
+    justify-content: center;
+	min-height: 750px;
+	max-height: 1080px;
+    background: #f8fcff;
+	background: linear-gradient(180deg, #edfcfd 0%, #faffff 100%);
+}
+
+.banner-box .bg-box {
+	position: relative;
+	width: 1240px;
+	height: 750px;
+	margin: 0 auto;
+}
+.mainform{
+    width: 298px;
+    /* height: 350px; */
+    position: absolute;
+    top: 24%;
+    left: calc(50% + 100px);
+    /* left: 20%; */
+    /* margin-top: 165px;
+    left: -600px; */
+    background-color: #FFF;
+    padding: 35px 35px 10px;
+    border-radius: 2px;
+    box-shadow: 0 6px 12px 0 rgb(138 153 150 / 15%);
+}
+#mainForm input{
+	line-height: 22px;
+	padding: 14px 0;
+	height: 18px;
+	/* *height: 16px;
+	*padding: 0px 0; */
+}
+.card_title{
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #387aff;
+    text-align: center;
+}
+.card_title a{
+    color: #387aff;
+}
+.card_input{
+    width: 276px;
+    position: relative;
+    padding: 0px 0px;
+    height: 46px;
+    line-height: 22px;
+    font-size: 14px;
+    margin-bottom: 26px;
+    border: 1px solid #dadada;
+
+}
+/* .card_phone{
+    width: 74%;
+    text-indent: 22px
+} */
+/* .yanzheng{
+    width: 276px;
+    height: 46px;
+    border: 1px solid #515151;
+    padding: 0px 10px;
+} */
+a.BtnBlue{
+    background-color: #387aff;
+    width: 300px;
+    display: block;
+    height: 46px;
+    font-size: 14px;
+    line-height: 46px;
+    text-align: center;
+    margin-bottom: 10px;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 4px;
+}
+.checkPermission{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.checkPermission span{
+    display: inline-block;
+    margin-bottom: 30px;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 10px;
+    font-size: 13px;
+}
+a{
+    color:#387aff ;
+}.other{
+    color: #387aff;
+    float: left;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+/* #flymeFooter {
+    border-color: transparent !important;
+    position: static;
+} */
+.footerWrap {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 130px;
+    border-top: solid 1px #E5E6E7;
+    color: black;
+}
+.footerInner {
+    width: 1000px;
+    margin: 24px auto 30px;
+}
+.footer-layer1 {
+    height: 50px;
+    line-height: 50px;
+}
+.footer-innerLink{
+    float: left;
+    /* width: 70%; */
+    height: 50px;
+}
+.footer-last{
+	width: 250px;
+	height: 50px;
+	float: left;
+    margin-left: 36px;
+    background: url(../image/footer.png) no-repeat
+}
+.foot-line {
+    background-color: #888;
+    margin: 0px 5px;
+    width: 1px;
+    height: 10px;
+}
+/* .footer-language {
+    overflow: hidden;
+    cursor: default;
+    background: url(/img/base.png) -80px -150px no-repeat;
+    height: 50px;
+} */
+
+.footer-service {
+    float: left;
+    margin-left: 36px;
+}
+#service-online {
+    display: inline-block;
+    height: 20px;
+    line-height: 18px;
+    width: 64px;
+    color: white;
+    background-color: #32a5e7;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    text-align: center;
+}
+.footer-outerLink {
+    position: relative;
+    float: right;
+    padding-top: 9px;
+}
+.footer-layer1 a:link {
+    color: black;
+}
+.footer-outerLink a {
+    cursor: pointer;
+}
+.footer-outerLink a {
+    margin-left: 10px;
+    display: inline-block;
+    overflow: hidden;
+    width: 32px;
+    height: 32px;
+}
+.copyrightWrap {
+    width: 100%;
+}
+.copyrightInner {
+    width: 1000px;
+    margin: 0px auto;
+}
+.copyrightInner span {
+    font-size: 12px;
+    color: #7f7f7f;
+}
+.copyrightInner a {
+    white-space: nowrap;
+    float: left;
+    color: #7f7f7f;
+    margin-left: 6px;
+}
